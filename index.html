@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Munir - Portofolio Profesional</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background-color: #1e3a8a; /* blue-900 */
+            border: 4px solid #bfdbfe; /* blue-200 */
+            border-radius: 50%;
+            position: absolute;
+            left: -8px;
+            top: 6px;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e2e8f0; /* slate-200 */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-bold text-xl text-blue-900 tracking-tight">Muhammad Munir</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Tentang</a>
+                    <a href="#pengalaman" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Pengalaman</a>
+                    <a href="#keahlian" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Keahlian</a>
+                    <a href="#kontak" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Kontak</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-blue-600 focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#beranda" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Beranda</a>
+                <a href="#tentang" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Tentang</a>
+                <a href="#pengalaman" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Pengalaman</a>
+                <a href="#keahlian" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Keahlian</a>
+                <a href="#kontak" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                <div class="w-full md:w-2/3 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-800/50 border border-blue-400/30 text-blue-200 text-sm font-medium mb-4">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i> Area Muarateweh
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Halo, Saya <br><span class="text-blue-400">Muhammad Munir</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-300 font-light">
+                        Subleader Pertambangan di PT Kanitra Mitra Jaya Utama
+                    </p>
+                    <p class="text-slate-400 text-lg max-w-2xl">
+                        Berpengalaman lebih dari 10 tahun dalam industri pertambangan dan alat berat, dengan fokus pada kepemimpinan tim, manajemen operasional, dan keunggulan pelayanan (After Sales Service).
+                    </p>
+                    <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#kontak" class="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors shadow-lg shadow-blue-500/30 flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Hubungi Saya
+                        </a>
+                        <a href="#pengalaman" class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg backdrop-blur-sm border border-white/10 transition-colors flex items-center">
+                            <i data-lucide="briefcase" class="w-5 h-5 mr-2"></i> Lihat Pengalaman
+                        </a>
+                    </div>
+                </div>
+                <div class="w-48 h-48 md:w-64 md:h-64 relative shrink-0">
+                    <!-- Foto Profil dengan Fallback -->
+                    <div class="w-full h-full rounded-full border-4 border-blue-400/30 overflow-hidden bg-slate-800 flex items-center justify-center shadow-2xl relative">
+                        <!-- Ikon default yang akan tertutup jika foto berhasil dimuat -->
+                        <i data-lucide="user" class="w-24 h-24 text-slate-400 absolute"></i>
+                        <!-- Foto Anda. onerror digunakan untuk menyembunyikan img jika file tidak ditemukan, sehingga ikon user di belakangnya terlihat -->
+                        <img src="Foto(1).jpg" alt="Foto Profil Muhammad Munir" class="w-full h-full object-cover object-top relative z-10" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang & Data Diri -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 inline-flex items-center">
+                    <i data-lucide="user-circle" class="w-8 h-8 mr-3 text-blue-600"></i> Profil Saya
+                </h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Personal Summary -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-slate-800">Ringkasan Profesional</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg text-justify">
+                        Saya adalah seorang subleader dalam pertambangan yang bertugas untuk mengawasi subordinat di area pertambangan. Saya terbiasa bekerja dengan detail, cepat beradaptasi, dan mampu menyelesaikan pekerjaan secara mandiri maupun bersama tim.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-lg text-justify">
+                        Saya juga aktif dalam mendukung kelancaran proses di site serta menjaga komunikasi yang baik dengan berbagai pihak untuk mencapai target perusahaan dengan efisien dan aman.
+                    </p>
+                    
+                    <!-- Pencapaian Highlight -->
+                    <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100 flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i data-lucide="trophy" class="w-6 h-6 text-blue-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-900 text-lg mb-1">Pencapaian Utama</h4>
+                            <p class="text-blue-800 text-sm md:text-base">Mencapai 100% target After Sales Service Komatsu Remanufacturing Area (KRA) selama bertugas di Adaro Wara & Pama.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Info -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-6 border-b border-slate-200 pb-4">Informasi Pribadi</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="calendar" class="w-5 h-5 text-slate-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <span class="block text-sm font-medium text-slate-500">Tempat, Tanggal Lahir</span>
+                                <span class="text-slate-800 font-medium">Jember, 17 Januari 1991</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="flag" class="w-5 h-5 text-slate-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <span class="block text-sm font-medium text-slate-500">Kebangsaan</span>
+                                <span class="text-slate-800 font-medium">Indonesia</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="heart" class="w-5 h-5 text-slate-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <span class="block text-sm font-medium text-slate-500">Status</span>
+                                <span class="text-slate-800 font-medium">Menikah</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="compass" class="w-5 h-5 text-slate-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <span class="block text-sm font-medium text-slate-500">Hobi</span>
+                                <span class="text-slate-800 font-medium">Membaca, Jalan 30 menit, Touring</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="id-card" class="w-5 h-5 text-slate-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <span class="block text-sm font-medium text-slate-500">NRP / ID</span>
+                                <span class="text-slate-800 font-medium">70210051</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section id="pengalaman" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 inline-flex items-center">
+                    <i data-lucide="briefcase" class="w-8 h-8 mr-3 text-blue-600"></i> Pengalaman Kerja
+                </h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="relative pl-6 md:pl-0">
+                <!-- Timeline vertical line (hidden on mobile, centered on desktop) -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-blue-200"></div>
+
+                <!-- Experience Item 1 -->
+                <div class="mb-12 relative flex flex-col md:flex-row md:justify-between items-center w-full">
+                    <div class="md:w-5/12 order-1 md:order-1 text-left md:text-right pr-0 md:pr-8 w-full">
+                        <h3 class="text-xl font-bold text-slate-900">SUBLEADER</h3>
+                        <h4 class="text-blue-600 font-medium text-lg">PT KAMAJU</h4>
+                        <p class="text-slate-500 flex items-center md:justify-end mt-1">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> Area Muarateweh
+                        </p>
+                    </div>
+                    <div class="z-10 absolute left-[-11px] md:static md:w-2/12 order-2 md:order-2 flex justify-center">
+                        <div class="w-6 h-6 bg-blue-600 rounded-full border-4 border-slate-50 flex items-center justify-center shadow-md"></div>
+                    </div>
+                    <div class="md:w-5/12 order-3 md:order-3 text-left pl-8 md:pl-8 w-full mt-2 md:mt-0">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+                            <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold mb-2">Oktober 2025 - Sekarang</span>
+                            <p class="text-slate-600 mt-2 text-sm">Bertanggung jawab mengawasi subordinat di area pertambangan, memastikan kelancaran operasional dan komunikasi tim.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="mb-12 relative flex flex-col md:flex-row md:justify-between items-center w-full">
+                    <div class="md:w-5/12 order-1 md:order-3 text-left md:text-left pl-0 md:pl-8 w-full">
+                        <h3 class="text-xl font-bold text-slate-900">SENIOR RAMO</h3>
+                        <h4 class="text-blue-600 font-medium text-lg">PT KAMAJU ADARO BUSERT</h4>
+                    </div>
+                    <div class="z-10 absolute left-[-11px] md:static md:w-2/12 order-2 md:order-2 flex justify-center">
+                        <div class="w-6 h-6 bg-blue-400 rounded-full border-4 border-slate-50 flex items-center justify-center shadow-md"></div>
+                    </div>
+                    <div class="md:w-5/12 order-3 md:order-1 text-left md:text-right pr-0 md:pr-8 w-full mt-2 md:mt-0 pl-8 md:pl-0">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold mb-2">Oktober 2019 - Oktober 2025</span>
+                            <p class="text-slate-600 mt-2 text-sm">Menjalankan peran Senior RAMO, memimpin teknis operasional, dan problem-solving lapangan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="mb-12 relative flex flex-col md:flex-row md:justify-between items-center w-full">
+                    <div class="md:w-5/12 order-1 md:order-1 text-left md:text-right pr-0 md:pr-8 w-full">
+                        <h3 class="text-xl font-bold text-slate-900">RAMO</h3>
+                        <h4 class="text-blue-600 font-medium text-lg">PT KAMAJU ADARO WARA & PAMA</h4>
+                    </div>
+                    <div class="z-10 absolute left-[-11px] md:static md:w-2/12 order-2 md:order-2 flex justify-center">
+                        <div class="w-6 h-6 bg-slate-300 rounded-full border-4 border-slate-50 flex items-center justify-center shadow-md"></div>
+                    </div>
+                    <div class="md:w-5/12 order-3 md:order-3 text-left pl-8 md:pl-8 w-full mt-2 md:mt-0">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold mb-2">Februari 2012 - Oktober 2019</span>
+                            <p class="text-slate-600 mt-2 text-sm">Berhasil mencapai 100% target After Sales Service Komatsu Remanufacturing Area (KRA).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="relative flex flex-col md:flex-row md:justify-between items-center w-full">
+                    <div class="md:w-5/12 order-1 md:order-3 text-left md:text-left pl-0 md:pl-8 w-full">
+                        <h3 class="text-xl font-bold text-slate-900">MAGANG RAMO</h3>
+                        <h4 class="text-blue-600 font-medium text-lg">PT KAMAJU ADARO TANJUNG RABUSIS</h4>
+                    </div>
+                    <div class="z-10 absolute left-[-11px] md:static md:w-2/12 order-2 md:order-2 flex justify-center">
+                        <div class="w-6 h-6 bg-slate-200 rounded-full border-4 border-slate-50 flex items-center justify-center shadow-md"></div>
+                    </div>
+                    <div class="md:w-5/12 order-3 md:order-1 text-left md:text-right pr-0 md:pr-8 w-full mt-2 md:mt-0 pl-8 md:pl-0">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold mb-2">Februari 2010 - 2012</span>
+                            <p class="text-slate-600 mt-2 text-sm">Awal karir di industri pertambangan, mempelajari dasar-dasar operasional alat berat dan perawatan mesin.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile timeline line -->
+                <div class="absolute left-2.5 top-2 bottom-0 w-0.5 bg-blue-200 md:hidden -z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian & Pendidikan -->
+    <section id="keahlian" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Keahlian -->
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 inline-flex items-center">
+                        <i data-lucide="award" class="w-8 h-8 mr-3 text-blue-600"></i> Keahlian Profesional
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Skill 1 -->
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 p-2 rounded-lg mr-3 text-blue-600">
+                                    <i data-lucide="users" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-800">Komunikasi Efektif</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm pl-12">Mampu berkomunikasi dengan baik, baik untuk keperluan internal tim maupun eksternal dengan berbagai pihak terkait.</p>
+                        </div>
+
+                        <!-- Skill 2 -->
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 p-2 rounded-lg mr-3 text-blue-600">
+                                    <i data-lucide="lightbulb" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-800">Problem Solving & Keputusan</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm pl-12">Handal dalam memecahkan masalah di lapangan serta cepat dan tepat dalam pengambilan keputusan yang krusial.</p>
+                        </div>
+
+                        <!-- Skill 3 -->
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 p-2 rounded-lg mr-3 text-blue-600">
+                                    <i data-lucide="target" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-800">Kepemimpinan Tim</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm pl-12">Mampu mengarahkan dan memotivasi tim subordinat untuk kemajuan bersama dan pencapaian target kerja.</p>
+                        </div>
+
+                        <!-- Skill 4 -->
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 hover:border-blue-200 transition-colors shadow-sm">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 p-2 rounded-lg mr-3 text-blue-600">
+                                    <i data-lucide="monitor" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-800">Administrasi & Pelaporan</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm pl-12">Menguasai penggunaan Microsoft Office (Word, Excel, PowerPoint) untuk kebutuhan pendataan dan presentasi laporan harian/bulanan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pendidikan -->
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 inline-flex items-center">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 mr-3 text-blue-600"></i> Latar Belakang Akademis
+                    </h2>
+                    
+                    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                        
+                        <!-- Edu 1 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 group-[.is-active]:bg-blue-600 text-slate-500 group-[.is-active]:text-blue-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <div class="flex items-center justify-between space-x-2 mb-1">
+                                    <div class="font-bold text-slate-900">UT SCHOOL</div>
+                                    <time class="font-medium text-sm text-blue-600">2010</time>
+                                </div>
+                                <div class="text-slate-500 text-sm">Pelatihan intensif bidang mekanik dan operasional alat berat.</div>
+                            </div>
+                        </div>
+
+                        <!-- Edu 2 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <i data-lucide="building" class="w-5 h-5"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <div class="flex items-center justify-between space-x-2 mb-1">
+                                    <div class="font-bold text-slate-900">SMKN 2 Jember</div>
+                                    <time class="font-medium text-sm text-slate-500">2006 - 2009</time>
+                                </div>
+                                <div class="text-blue-600 font-medium text-sm mb-2">Teknik Pemesinan</div>
+                                <div class="text-slate-500 text-sm">Pendidikan dasar vokasi dalam bidang manufaktur dan mesin perkakas.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold inline-flex items-center">
+                    <i data-lucide="phone-call" class="w-8 h-8 mr-3 text-blue-400"></i> Hubungi Saya
+                </h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-slate-400 text-lg max-w-2xl mx-auto">
+                    Tertarik untuk bekerja sama atau memiliki pertanyaan terkait profil saya? Jangan ragu untuk menghubungi melalui kontak di bawah ini.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Kontak Cards -->
+                <div class="bg-slate-800 p-8 rounded-2xl text-center hover:bg-slate-700 transition-colors border border-slate-700">
+                    <div class="w-16 h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-400">
+                        <i data-lucide="phone" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Telepon / WhatsApp</h3>
+                    <a href="https://wa.me/6282244709080" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white transition-colors text-lg">+62 822-4470-9080</a>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-2xl text-center hover:bg-slate-700 transition-colors border border-slate-700">
+                    <div class="w-16 h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-400">
+                        <i data-lucide="mail" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mmunir1991@gmail.com" target="_blank" rel="noopener noreferrer" class="group block text-slate-300 hover:text-white transition-colors text-lg break-all">
+                        mmunir1991@gmail.com
+                        <span class="flex items-center justify-center mt-3 text-blue-400 group-hover:text-blue-300 text-xs font-medium transition-colors">
+                            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> Tulis Email via Gmail
+                        </span>
+                    </a>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-2xl text-center hover:bg-slate-700 transition-colors border border-slate-700">
+                    <div class="w-16 h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-400">
+                        <i data-lucide="map-pin" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Alamat Rumah</h3>
+                    <a href="https://www.google.com/maps?q=-8.260657162259157,113.44816767757993" target="_blank" rel="noopener noreferrer" class="group block text-slate-300 hover:text-white transition-colors text-sm leading-relaxed">
+                        Jln Ahmad Yani No.8 Dusun Krajan, RT002 RW002. <br>
+                        Umbulsari, Jember, Jawa Timur
+                        <span class="flex items-center justify-center mt-3 text-blue-400 group-hover:text-blue-300 text-xs font-medium transition-colors">
+                            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> Buka di Google Maps
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; 2026 Muhammad Munir. All rights reserved.</p>
+            <p class="text-sm mt-2">Dibuat sebagai portofolio profesional.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Mobile Menu JS -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
